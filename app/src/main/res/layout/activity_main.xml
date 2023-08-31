@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/blue2"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="89dp"
+        android:layout_height="91dp"
+        app:srcCompat="@drawable/icons"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="140dp"
+        tools:ignore="ContentDescription"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="70dp"
+                android:layout_weight="1.0"
+                android:fontFamily="@font/volkhov_bold"
+                android:gravity="center"
+                android:text="Currency Converter"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                tools:ignore="HardcodedText,TextSizeCheck,VisualLintOverlap" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|bottom|center|fill|center_vertical|fill_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1.0"
+                    android:fontFamily="@font/volkhov_bold"
+                    android:text=" From:"
+                    android:textColor="@color/white"
+                    tools:ignore="Suspicious0dp" />
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="To:"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/volkhov_bold"
+                    android:textColor="@color/white"
+                    tools:ignore="Suspicious0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingPrefix">
+
+                <TextView
+                    android:id="@+id/convertFrom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1.0"
+                    android:background="@android:drawable/editbox_background"
+                    android:fontFamily="@font/volkhov"
+                    android:hint="Select"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textColorHint="#757575"
+                    android:textSize="12sp"
+                    app:drawableEndCompat="@drawable/ic_baseline"
+                    app:drawableRightCompat="@drawable/ic_baseline"
+                    tools:ignore="HardcodedText,Suspicious0dp" />
+
+                <TextView
+                    android:id="@+id/convertTo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1.0"
+                    android:background="@android:drawable/editbox_background"
+                    android:fontFamily="@font/volkhov"
+                    android:hint="Select"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textColorHint="#757575"
+                    android:textSize="12sp"
+                    app:drawableEndCompat="@drawable/ic_baseline"
+                    app:drawableRightCompat="@drawable/ic_baseline"
+                    tools:ignore="HardcodedText,Suspicious0dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|bottom|center|fill|center_vertical|fill_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/t4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1.0"
+                    android:text="Conversion Amount"
+                    android:fontFamily="@font/volkhov"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/t5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1.0"
+                    android:fontFamily="@font/volkhov"
+                    android:text="Resulted Rate"
+                    android:textColor="@color/white"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/amt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1.0"
+                    android:autofillHints=""
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/volkhov"
+                    android:hint="Amount"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#78909C"
+                    android:textSize="16sp"
+                    tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:hint=" Result"
+                    android:textColorHint="#78909C"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/volkhov"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:paddingTop="10dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/conversion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:fontFamily="@font/volkhov_bold"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="Convert"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="TextSizeCheck,VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/reset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:fontFamily="@font/volkhov_bold"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="Reset"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="TextSizeCheck,VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:fontFamily="@font/volkhov_bold"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="Refresh"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="TextSizeCheck,VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/exit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:fontFamily="@font/volkhov_bold"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="Exit"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="TextSizeCheck,VisualLintButtonSize" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+
